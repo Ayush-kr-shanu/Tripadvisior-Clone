@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="signup.html">
+  <link rel="stylesheet" href="./style/login.css">
+  <title>change-pass</title>
+</head>
+<body>
+  <div class="container">
+    <div class="center">
+      <!-- <h1>Login</h1> -->
+      <img
+        src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_Logo_dark-bg_circle-green_horizontal-lockup_registered_RGB.svg"
+        alt="">
+      <h1>Welcome</h1>
+      <form>
+        <div class="txt_field">
+          <input type="email" id="email" name="email" required>
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="oldpass" name="password" required>
+          <span></span>
+          <label>Old-Password</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="newpass" name="password" required>
+          <span></span>
+          <label>New-Password</label>
+        </div>
+        <div class="pass">Forget Password?</div>
+        <input name="submit" type="submit" value="Change password">
+        <div class="signup_link">
+          <p>If you want to <a href="./delete.html">Delete</a> your account.By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and Cookie
+            Statement</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<script>
+  // changePassword.js
+
+  const form = document.querySelector('form');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Get the form inputs
+    const email = document.getElementById('email').value;
+    const oldPassword = document.getElementById('oldpass').value;
+    const newPassword = document.getElementById('newpass').value;
+
+    // Make a request to update the password
+    fetch('http://localhost:4500/users/update-pass', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}` // Include the JWT token in the headers
+      },
+      body: JSON.stringify({ email, oldPassword, newPassword })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.msg === 'Password updated successfully') {
+          alert('Password updated successfully');
+          form.reset(); // Clear the form inputs
+        } else {
+          alert(data.msg);
+        }
+      })
+      .catch(err => console.error(err));
+  });
+</script>

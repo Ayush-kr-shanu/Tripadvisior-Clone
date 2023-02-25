@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,65 +9,81 @@
     <link rel="stylesheet" href="./style/login.css">
     <title>Sign in</title>
 </head>
+
 <body>
     <div class="container">
         <div class="center">
             <!-- <h1>Login</h1> -->
-            <img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_Logo_dark-bg_circle-green_horizontal-lockup_registered_RGB.svg" alt="">
+            <img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_Logo_dark-bg_circle-green_horizontal-lockup_registered_RGB.svg"
+                alt="">
             <h1>Welcome Back.</h1>
-            <form >
-            <div class="txt_field">
-                <input type="email" id="email" name="email" required>
-                <span></span>
-                <label>Email</label>
-            </div>
-            <div class="txt_field">
-                <input type="password" id="pass" name="password" required>
-                <span></span>
-                <label>Password</label>
-            </div>
+            <form>
+                <div class="txt_field">
+                    <input type="email" id="email" name="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" id="pass" name="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
                 <div class="pass">Forget Password?</div>
                 <input name="submit" type="submit" value="Sign in">
                 <div class="signup_link">
-                    Not a member ? 
-                 <a href="./signup.html">Join</a> to unlock the best of Tripadvisor.
-                 <p>By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and Cookie Statement</p>
-            </div>
+                    Not a member ?
+                    <a href="./signup.html">Join</a> to unlock the best of Tripadvisor.
+                    <p>By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and Cookie
+                        Statement</p>
+                </div>
             </form>
         </div>
     </div>
-    
+
 </body>
+
 </html>
 <script>
 
 
-let form = document.querySelector("form");
-  form.addEventListener("submit", myForm);
+    let form = document.querySelector("form");
+    form.addEventListener("submit", myForm);
 
-  function myForm(event){
-    event.preventDefault();
+    function myForm(event) {
+  event.preventDefault();
 
-    const payload={
-            email:document.getElementById('email').value,
-            pass:document.getElementById('pass').value
-        }
-        fetch('https://courageous-fox-train.cyclic.app/users/login',{
-            method: "POST",
-            headers:{
-                'Content-type':'application/json'
-            },
-            body:JSON.stringify(payload)
-        })
-        .then(res => res.json())
-        .then(res =>{
-            console.log(res);
-            localStorage.setItem('token',res.token)+
-            alert("Login Successful ")
-            window.location.href = "./index.html"
-        })
-        .catch(err=> console.log(err))
-        
-  }
+  const email = document.getElementById('email').value;
+  const pass = document.getElementById('pass').value;
+
+  fetch('http://localhost:4500/users/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ email, pass })
+  })
+  .then(res => {
+    if (!res.ok) {
+      throw new Error('Invalid email or password'); // Handle server errors
+    }
+    return res.json();
+  })
+  .then(res => {
+    if (res.msg === "user has been logged in") {
+      console.log(res);
+      localStorage.setItem('token', res.token);
+      alert('Login Successful');
+      window.location.href = './index.html'; // Redirect after login
+    } else {
+      alert('Wrong credentials');
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    alert('Invalid email or password'); // Display error message to user
+  });
+}
+
+
 
 </script>

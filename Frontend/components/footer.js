@@ -86,8 +86,8 @@ function footer(){
 
 function navbar () {
   return `
-  <div class="home_main_navbar_yogi">
-  <div class="main_navbar_logo_yogi">
+  <div class="home_main_navbar">
+  <div class="main_navbar_logo">
     <a href="#"
       ><img
         src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
@@ -95,26 +95,26 @@ function navbar () {
     /></a>
   </div>
 
-  <div class="home_main_navbar_searchbox_yogi"></div>
+  <div class="home_main_navbar_searchbox"></div>
 
-  <div class="navbar_signup_section_yogi">
-    <div class="navbar_flex" id="navbar_review_yogi">
+  <div class="navbar_signup_section">
+    <div class="navbar_flex" id="navbar_review">
       <!-- <h1>&#x270E;</h1> -->
       <span class="material-symbols-outlined"> edit </span>
       <p>Review</p>
     </div>
 
-    <div class="navbar_flex" id="navbar_trips_yogi">
+    <div class="navbar_flex" id="navbar_trips">
       <span class="material-symbols-outlined"> favorite</span>
       <p>Trips</p>
     </div>
 
-    <div class="navbar_flex" id="navbar_alerts_yogi">
+    <div class="navbar_flex" id="navbar_alerts">
       <span class="material-symbols-outlined"> notifications </span>
       <p>Alerts</p>
     </div>
 
-    <div class="navbar_flex" id="navbar_signIn_yogi">Yogesh</div>
+    <div class="navbar_flex" id="navbar_signIn"><span id="signId"></span></div>
   </div>
 </div>
   `
