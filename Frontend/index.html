@@ -1,198 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100.700,0..1,-50..200" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Home Page</title>
+    <!-- <link rel="stylesheet" href="/style/navbar.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0"
+    />
+    <!-- <link rel="stylesheet" href="/style/home.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- <link rel="stylesheet" href="/footer.css" /> -->
     <script src="https://kit.fontawesome.com/2ace6b5de8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="index.css">
-</head>
 
-<body>
+    <link rel="stylesheet" href="./style/index.css">
+    <!-- <link rel="stylesheet" href="/style/slider3.css"> -->
+  </head>
 
-    <!-------------------- nav bar ----------------------------------------------------->
-    <div class="navbar_">
-        <div class="home_main_navbar_">
-            <div class="main_navbar_logo_">
-                <a href="#"><img
-                        src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
-                        alt="Tripadvisor_logo" /></a>
-            </div>
+  <body>
+    <!-- navbar  -->
+    <div class="navbar">
+    
 
-            <div class="home_main_navbar_searchbox_"></div>
+      <div class="home_main_navbar">
+        <div class="main_navbar_logo">
+        <a href="#"
+          ><img
+            src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+            alt="Tripadvisor_logo"
+        /></a>
+      </div>
 
-            <div class="navbar_signup_section_">
-                <div onclick="addReview()" class="navbar_flex" id="navbar_review_">
-                    <!-- <h1>&#x270E;</h1> -->
-                    <span class="material-symbols-outlined"> edit </span>
-                    <p>Review</p>
-                </div>
+      <div class="home_main_navbar_searchbox"></div>
 
-                <div onclick="addTrips()" class="navbar_flex" id="navbar_trips_">
-                    <span class="material-symbols-outlined"> favorite</span>
-                    <p>Trips</p>
-                </div>
-
-                <div onclick="addAlerts()" class="navbar_flex" id="navbar_alerts_">
-                    <span class="material-symbols-outlined"> notifications </span>
-                    <p>Alerts</p>
-                </div>
-
-                <div onclick="signup()" class="navbar_flex" id="navbar_signIn_"><span>Sign-in</span></div>
-
-                <div onclick="addBasket()" class="navbar_flex" id="navbar_basket_">
-                    <span class="material-symbols-outlined"> favorite</span>
-                    <p>Basket</p>
-                </div>
-            </div>
+      <div class="navbar_signup_section">
+        <div onclick="addReview()" class="navbar_flex" id="navbar_review">
+          <!-- <h1>&#x270E;</h1> -->
+          <span class="material-symbols-outlined"> edit </span>
+          <p>Review</p>
         </div>
+
+        <div onclick="addTrips()" class="navbar_flex" id="navbar_trips">
+          <span class="material-symbols-outlined"> favorite</span>
+          <p>Trips</p>
+        </div>
+
+        <div onclick="addAlerts()" class="navbar_flex" id="navbar_alerts">
+          <span class="material-symbols-outlined"> notifications </span>
+          <p>Alerts</p>
+        </div>
+
+        <div onclick="signup()" class="navbar_flex" id="navbar_signIn"><span>Sign in</span></div>
+      </div>
+      </div>
 
     </div>
 
-    <!--------------------------------------------------- nav bar end ------------------------------------------>
+    <!-- mainNavbar -->
+    <div class="navbar2">
+      <div onclick="hotels()" class="navbar2_element">
+        <p>Hotels</p>
+        <span class="material-symbols-outlined"> bed </span>
+      </div>
 
-        <!-- mainNavbar -->
-        <div class="navbar2_">
-            <div onclick="hotels()" class="navbar2_element_">
-              <p>Hotels</p>
-              <span class="material-symbols-outlined"> bed </span>
-            </div>
-      
-            <div class="navbar2_element_">
-              <p>Holiday Homes</p>
-              <span class="material-symbols-outlined"> house </span>
-            </div>
-      
-            <div class="navbar2_element_">
-              <p onclick="ThingsToDo()">Things to Do</p>
-              <span class="material-symbols-outlined"> local_activity </span>
-            </div>
-      
-            <div class="navbar2_element_">
-              <p>Restaurants</p>
-              <span class="material-symbols-outlined"> restaurant_menu </span>
-            </div>
-      
-            <div class="navbar2_element_">
-              <p>Travel Stories</p>
-              <span class="material-symbols-outlined"> web </span>
-            </div>
-      
-            <div class="navbar2_element_">
-              <p>More</p>
-              <span class="material-symbols-outlined"> more_horiz </span>
-            </div>
-          </div>
+      <div class="navbar2_element">
+        <p>Holiday Homes</p>
+        <span class="material-symbols-outlined"> house </span>
+      </div>
 
-    <!-------------------------------------------- navbar2 --------------------------------------->
+      <div class="navbar2_element">
+        <p onclick="ThingsToDo()">Things to Do</p>
+        <span class="material-symbols-outlined"> local_activity </span>
+      </div>
+
+      <div class="navbar2_element">
+        <p>Restaurants</p>
+        <span class="material-symbols-outlined"> restaurant_menu </span>
+      </div>
+
+      <div class="navbar2_element">
+        <p>Travel Forums</p>
+        <span class="material-symbols-outlined"> forum </span>
+      </div>
+
+      <div class="navbar2_element">
+        <p>More</p>
+        <span class="material-symbols-outlined"> more_horiz </span>
+      </div>
+    </div>
+
+    <!-- navbar2 -->
     <div class="img_with_search_box">
-        <!-- <img src="https://static.tacdn.com/img2/brand/home/homemar2022_dt_trans.webp" alt="img_of_search_big_search_box"> -->
+      <!-- <img src="https://static.tacdn.com/img2/brand/home/homemar2022_dt_trans.webp" alt="img_of_search_big_search_box"> -->
 
-        <input type="search" id="search_city_name" placeholder="Where to ?" />
+      <input
+        type="search"
+        id="search_city_name"
+        placeholder="Where to ?"
+      />
     </div>
 
+    <!-- You might like these section -->
+    <!-- <div>
+      <h1>You might like these</h1>
+  </div> -->
 
-
-    <div class="getOutThere_section_">
-        <div class="getOutThere_fristDiv_">
-            <div>
-                <h1>Get out there</h1>
-                <p>
-                    Best of the Best tours, attractions & activities you won't want to
-                    miss
-                </p>
-            </div>
-
-            <button>See the list</button>
+    <!-- Get out there section -->
+    <div class="getOutThere_section">
+      <div class="getOutThere_fristDiv">
+        <div>
+          <h1>Get out there</h1>
+          <p>
+            Best of the Best tours, attractions & activities you won't want to
+            miss
+          </p>
         </div>
 
-        <div class="getOutThere_secondDiv_">
-            <img src="https://static.tacdn.com/img2/fallback_ads/tc-badge.png" alt="best of choice" />
-        </div>
+        <button>See the list</button>
+      </div>
+
+      <div class="getOutThere_secondDiv">
+        <img
+          src="https://static.tacdn.com/img2/fallback_ads/tc-badge.png"
+          alt="best of choice"
+        />
+      </div>
     </div>
 
     <!-- ways to tour Jaipur -->
     <!-- <div>ways to tour Jaipur </div> -->
 
     <!-- top destinations -->
-    <div id="top_destination"></div>
+    <div id="top_destination" ></div>
 
     <!-- Travellers'choice best of best section -->
-    <div class="travellers_choice_section_">
-        <div class="travellers_frist_Div_">
-            <div>
-                <img src="https://static.tacdn.com/img2/travelers_choice/TC_logomark_solid_cream.svg" alt="logo" />
+    <div class="travellers_choice_section">
+      <div class="travellers_frist_Div">
+        <div>
+          <img
+            src="https://static.tacdn.com/img2/travelers_choice/TC_logomark_solid_cream.svg"
+            alt="logo"
+          />
 
-                <h2>Travellers's Choice Best of the Best</h2>
+          <h2>Travellers's Choice Best of the Best</h2>
 
-                <button>See the Winners</button>
-            </div>
+          <button>See the Winners</button>
         </div>
+      </div>
 
-        <div class="travellers_second_div_">
-            <img src="https://static.tacdn.com/img2/brand/feed/tc_cards_desktop.jpeg" alt="travellers_second_div_img" />
-        </div>
+      <div class="travellers_second_div">
+        <img
+          src="https://static.tacdn.com/img2/brand/feed/tc_cards_desktop.jpeg"
+          alt="travellers_second_div_img"
+        />
+      </div>
     </div>
 
     <!-- footer part -->
     <div class="upperFooter">
         <div class="upperFooter_left_part">
+          <div>
+            <ul>
+              <li>About Tripadvisor</li>
+              <li>About Us</li>
+              <li>Press</li>
+              <li>Resources and Policies</li>
+              <li>Careers</li>
+              <li>Trust & Safety</li>
+              <li>Contact us</li>
+            </ul>
+          </div>
+  
+          <div>
+            <ul>
+              <li>Explore</li>
+              <li>Help Centre</li>
+              <li>Travel Articles</li>
+            </ul>
+          </div>
+  
+          <div>
             <div>
-                <ul>
-                    <li>About Tripadvisor</li>
-                    <li>About Us</li>
-                    <li>Press</li>
-                    <li>Resources and Policies</li>
-                    <li>Careers</li>
-                    <li>Trust & Safety</li>
-                    <li>Contact us</li>
-                </ul>
+              <ul>
+                <li>Do Business With Us</li>
+                <li>Owners & DMO/CVB</li>
+                <li>Business Advantage</li>
+                <li>Sponsored Placements</li>
+                <li>Access our Content API</li>
+              </ul>
             </div>
-
+  
             <div>
-                <ul>
-                    <li>Explore</li>
-                    <li>Help Centre</li>
-                    <li>Travel Articles</li>
-                </ul>
+              <ul>
+                <li>Get The App</li>
+                <li><a href="/download.html">iPhone App</a></li>
+                <li><a href="/download.html">Android App</a></li>
+              </ul>
             </div>
-
-            <div>
-                <div>
-                    <ul>
-                        <li>Do Business With Us</li>
-                        <li>Owners & DMO/CVB</li>
-                        <li>Business Advantage</li>
-                        <li>Sponsored Placements</li>
-                        <li>Access our Content API</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <ul>
-                        <li>Get The App</li>
-                        <li><a href="/downloadApp.html">iPhone App</a></li>
-                        <li><a href="/downloadApp.html">Android App</a></li>
-                    </ul>
-                </div>
-            </div>
+          </div>
         </div>
-
+  
         <div class="upperFooter_right_part">
-            Tripadvisor Sites
-            <p>Book tours and attraction tickets on <span>Viator</span></p>
+          Tripadvisor Sites
+          <p>Book tours and attraction tickets on <span>Viator</span></p>
         </div>
-    </div>
-
-    <div id="footer_by_real_" class="lowerFooter">
-
-    </div>
-</body>
+      </div>
+  
+      <div id="footer_by_real" class="lowerFooter">
+        
+      </div>
+    </body>
 
 </html>
+<script type="module"  >
+
+  import {footer,navbar} from "./components/footer.js"
+  // console.log(footer)
+
+  let container = document.getElementById("footer_by_real")
+
+  container.innerHTML = footer();
+
+  // slider3
+  import slider3 from "./components/slider3.js"
+  console.log(slider3);
+  let sliderOneDiv = document.getElementById("top_destination");
+  // sliderOneDiv.innerHTML = slider3();
+
+
+</script>
+<script src="./script/navbar2.js"></script>
+<script src="./script/index.js"></script>
+<script src="./script/slider3.js"></script>
