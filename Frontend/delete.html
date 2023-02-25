@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="signup.html">
+  <link rel="stylesheet" href="./style/login.css">
+  <title>Delete-Account</title>
+</head>
+<body>
+  <div class="container">
+    <div class="center">
+      <!-- <h1>Login</h1> -->
+      <img
+        src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_Logo_dark-bg_circle-green_horizontal-lockup_registered_RGB.svg"
+        alt="">
+      <h1>Delete Your Account</h1>
+      <form>
+        <div class="txt_field">
+          <input type="email" id="email" name="email" required>
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="oldpass" name="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" id="newpass" name="password" required>
+          <span></span>
+          <label>Confirm-Password</label>
+        </div>
+        <div class="pass">Forget Password?</div>
+        <input name="submit" type="submit" value="Delete Account">
+        <div class="signup_link">
+          <p>If don't you want to Delete <a href="./index.html">Go to home page</a> your account.By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and Cookie
+            Statement</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<script>
+    const form = document.querySelector('form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent the form from submitting
+
+  // Get the email input value
+  const email = document.getElementById('email').value;
+
+  // Make a request to delete the user
+  fetch('http://localhost:4500/users/delete', {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('token')}` // Include the JWT token in the headers
+    },
+    body: JSON.stringify({ email })
+  })
+    .then(res => res.text())
+    .then(data => {
+      alert(data); // Show a message with the response
+      form.reset(); // Clear the form input
+    })
+    .catch(err => console.error(err));
+});
+
+</script>

@@ -92,8 +92,6 @@ userRoute.delete('/delete', async (req, res) => {
     }
   });
 
-
-  
 module.exports = {
   userRoute,
 };

@@ -1,10 +1,10 @@
 function addReview(){
-    console.log("add Review")
+    window.location.href = "./changePass.html"
 }
 
 
 function addTrips(){
-    console.log("add Trips")
+    alert('No trips yet')
 }
 
 
@@ -18,18 +18,7 @@ function signup(){
     window.location.href = "./email.html"
 }
 
-let name = JSON.parse(localStorage.getItem("nickName")) || [];
-// console.log(nickname)
-// console.log(nickname.length)
-
-if ( nickname.length >= 1 ){
-
-    let namePaste = document.getElementById("navbar_signIn_yogi");
-
-        nickname.forEach(function(elem){
-        namePaste.innerText = elem.nickName;
-
-    })
+function addAlerts(){
+    alert('No New Notification')
 }
-
 

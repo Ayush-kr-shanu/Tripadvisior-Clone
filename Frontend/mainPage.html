@@ -11,21 +11,19 @@
     <!-- <link rel="stylesheet" href="hotelCard.css"> -->
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/navbar.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0"
-    />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
 </head>
 
 <body>
 
-    <div id="navbar_yogi"></div>
+    <div id="navbar"></div>
 
     <div class="hBanner_vw">
         <img src="https://images.pexels.com/photos/248867/pexels-photo-248867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="loading.">
-            <div class="Title_vw"> <span id="Title_city_vw"> Benguluru </span>Hotels and Places to Stay</div>
-            <!-- <h1 class="Title_vw"  <span id="Title_city_vw"> Benguluru </span>Hotels and Places to Stay</h1> -->
+        <div class="Title_vw"> <span id="Title_city_vw"> Benguluru </span>Hotels and Places to Stay</div>
+        <!-- <h1 class="Title_vw"  <span id="Title_city_vw"> Benguluru </span>Hotels and Places to Stay</h1> -->
     </div>
 
     <!-- <div class="Title_vw">
@@ -37,7 +35,7 @@
 
 
     <div class="date1">check In...<br><input onchange="checkIn(this)" type="date" id="checkIN_vw"></div>
-    <div class="date2">check Out...<br><input  onchange="checkOut(this)" type="date" id="checkOut_vw"></div>
+    <div class="date2">check Out...<br><input onchange="checkOut(this)" type="date" id="checkOut_vw"></div>
     <div class="guest">Guest...<div class="guestDetails_vw">
 
             <span><span id="r">0 </span> room ,</span>
@@ -58,55 +56,56 @@
     <div class="adding_guest_vw">
         <p class="cross_button">x</p>
         <div class="guest_img">
-        
+
             <img src="./images/guest.jpg" alt="loading....">
         </div>
 
         <div class="guest_buttons">
             <div class="rooms">
-               <span  id="same_styles_btn_vw"  class="minus_btn_vw"> -</span>
-               <span id="num">0</span>
-               <span id="same_styles_btn_vw"  class="plus_btn_vw"> + </span>
-                
+                <span id="same_styles_btn_vw" class="minus_btn_vw"> -</span>
+                <span id="num">0</span>
+                <span id="same_styles_btn_vw" class="plus_btn_vw"> + </span>
+
 
             </div>
             <div class="adults">
-                <span id="same_styles_btn_vw"  class="minus_btn_vw2"> -</span>
+                <span id="same_styles_btn_vw" class="minus_btn_vw2"> -</span>
                 <span id="num2">0</span>,
-                <span id="same_styles_btn_vw"  class="plus_btn_vw2"> + </span>
- 
-             </div>
-               <div class="children">
-                <span id="same_styles_btn_vw"  class="minus_btn_vw3"> -</span>
-                <span id="num3">0</span>
-                <span  id="same_styles_btn_vw" class="plus_btn_vw3"> + </span>
- 
-             </div>
+                <span id="same_styles_btn_vw" class="plus_btn_vw2"> + </span>
 
-             <button class="update_btn_vw">Update</button>
             </div>
+            <div class="children">
+                <span id="same_styles_btn_vw" class="minus_btn_vw3"> -</span>
+                <span id="num3">0</span>
+                <span id="same_styles_btn_vw" class="plus_btn_vw3"> + </span>
+
+            </div>
+
+            <button class="update_btn_vw">Update</button>
+        </div>
         <!-- </div>
     
     </div> -->
-            
-        </div>
-       
-       
- 
+
+    </div>
+
+
+
     <div class="select_price">
         <span>sort by : </span>
-         <select name="" id="select_price" >
-        <option value="">---by price--- </option>
+        <select name="" id="select_price">
+            <option value="">---by price--- </option>
 
-        <option value="LH">Low to High (price) </option>
-        <option value="HL">High to Low (price) </option>
-  
-      </select></div>
-         
+            <option value="LH">Low to High (price) </option>
+            <option value="HL">High to Low (price) </option>
+
+        </select>
+    </div>
 
 
 
-    <div class="main_hotel_container">    
+
+    <div class="main_hotel_container">
 
         <div class="appendingCards">
             <!-- hotel cards  -->
@@ -115,305 +114,312 @@
 
         <!-- side  bar   -->
         <div id="pj-sidebar-main">
-        <div id="pj-container-sidebar">
-            <!-- <input type="text" id="pj-map"> -->
-            <!-- <input id="map_submit" type="submit" onclick="getmap()"> -->
-            <div class="mapouter">
-                <div class="gmap_canvas"><iframe id="gmap_canvas" src="" frameborder="0" scrolling="no" marginheight="0"
-                        marginwidth="0"></iframe></div>
+            <div id="pj-container-sidebar">
+                <!-- <input type="text" id="pj-map"> -->
+                <!-- <input id="map_submit" type="submit" onclick="getmap()"> -->
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe id="gmap_canvas" src="" frameborder="0" scrolling="no"
+                            marginheight="0" marginwidth="0"></iframe></div>
+                </div>
             </div>
-        </div>
-        <hr>
-        <div class="pj-sidebar-1">
-            <h3>COVID-19</h3>
-            <div>
-                <input type="checkbox">
-                <p>Properties taking safety measures</p>
+            <hr>
+            <div class="pj-sidebar-1">
+                <h3>COVID-19</h3>
+                <div>
+                    <input type="checkbox">
+                    <p>Properties taking safety measures</p>
+                </div>
             </div>
-        </div>
-        <hr>
-        <div class="pj-sidebar-1">
-            <h3>Deals</h3>
-            <div>
-                <input type="checkbox">
-                <p>Free cancellation</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Reserve now,pay at saty</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Properties with special offers</p>
-            </div>
-        </div>
-
-        <div id="pj-sidebar-price">
-            <p>Price + estimated taxes and fees payable at booking</p>
-        </div>
-        <hr>
-        <div class="pj-sidebar-1">
-            <h3>Property type</h3>
-            <div>
-                <input  id="ch_hotel" type="checkbox" value="hotel">
-                <p>Hotels</p>
-                <p>1303</p>
-            </div>
-            <div>
-                <input id="ch_guest"  type="checkbox" value="guest">
-                <p>Guest Houses</p>
-                <p>568</p>
-            </div>
-            <div>
-                <input id="ch_lodge" type="checkbox" value="lodge">
-                <p>Lodges</p>
-                <p>302</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Specility lodgings</p>
-                <p>229</p>
-            </div>
-            <p>Show all</p>
-        </div>
-        <hr>
-        <div class="pj-sidebar-1">
-            <h3>Popular Types</h3>
-            <div>
-                <input type="checkbox">
-                <p>Breakfast included</p>
-                <p>648</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>5 Star</p>
-                <p>33</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>4 Star</p>
-                <p>48</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p><button class="pj-button"></button><button class="pj-button"></button><button
-                        class="pj-button"></button><button class="pj-button"></button><button
-                        class="pj-button"></button></p>
-                <p>129</p>
-            </div>
-        </div>
-        <hr>
-        <div class="pj-sidebar-1">
-            <h3>Amenities</h3>
-            <div>
-                <input type="checkbox">
-                <p>Free Wifi</p>
-                <p>927</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Breakfast included</p>
-                <p>648</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Pool</p>
-                <p>107</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Free parking</p>
-                <p>644</p>
-            </div>
-            <p>Show all</p>
-        </div>
-        <hr>
-        <div class="pj-sidebar-1">
-            <h3>Distances</h3>
-            <div>
-                <input type="checkbox">
-                <p>Getway of India</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Colaba</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Shree Siddhivinayak</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Chhatrapati Shivaji Terminus</p>
-            </div>
-            <p>Show all</p>
-        </div>
-        <hr>
-        <div class="pj-sidebar-1">
-            <h3>Neighbourhoods</h3>
-            <div>
-                <input type="checkbox">
-                <p>Western Suburbs</p>
-                <p>989</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>South Mumbai</p>
-                <p>498</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Andheri</p>
-                <p>472</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Estern Suburbs</p>
-                <p>352</p>
-            </div>
-            <p>Show all</p>
-        </div>
-        <hr>
-        <div class="pj-sidebar-1">
-            <h3>Traveller rating</h3>
-            <div>
-                <input type="checkbox">
-                <p><button class="pj-button"></button><button class="pj-button"></button><button
-                        class="pj-button"></button><button class="pj-button"></button><button
-                        class="pj-button"></button></p>
-
-                <p>129</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p><button class="pj-button"></button><button class="pj-button"></button><button
-                        class="pj-button"></button><button class="pj-button"></button><button
-                        class="pj-button-1"></button></p>
-                <p>& Up</p>
-                <p>608</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p><button class="pj-button"></button><button class="pj-button"></button><button
-                        class="pj-button"></button><button class="pj-button-1"></button><button
-                        class="pj-button-1"></button></p>
-                <p>& Up</p>
-                <p>1066</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p><button class="pj-button"></button><button class="pj-button"></button><button
-                        class="pj-button-1"></button><button class="pj-button-1"></button><button
-                        class="pj-button-1"></button></p>
-                <p>& Up</p>
-                <p>1294</p>
+            <hr>
+            <div class="pj-sidebar-1">
+                <h3>Deals</h3>
+                <div>
+                    <input type="checkbox">
+                    <p>Free cancellation</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Reserve now,pay at saty</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Properties with special offers</p>
+                </div>
             </div>
 
+            <div id="pj-sidebar-price">
+                <p>Price + estimated taxes and fees payable at booking</p>
+            </div>
+            <hr>
+            <div class="pj-sidebar-1">
+                <h3>Property type</h3>
+                <div>
+                    <input id="ch_hotel" type="checkbox" value="hotel">
+                    <p>Hotels</p>
+                    <p>1303</p>
+                </div>
+                <div>
+                    <input id="ch_guest" type="checkbox" value="guest">
+                    <p>Guest Houses</p>
+                    <p>568</p>
+                </div>
+                <div>
+                    <input id="ch_lodge" type="checkbox" value="lodge">
+                    <p>Lodges</p>
+                    <p>302</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Specility lodgings</p>
+                    <p>229</p>
+                </div>
+                <p>Show all</p>
+            </div>
+            <hr>
+            <div class="pj-sidebar-1">
+                <h3>Popular Types</h3>
+                <div>
+                    <input type="checkbox">
+                    <p>Breakfast included</p>
+                    <p>648</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>5 Star</p>
+                    <p>33</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>4 Star</p>
+                    <p>48</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p><button class="pj-button"></button><button class="pj-button"></button><button
+                            class="pj-button"></button><button class="pj-button"></button><button
+                            class="pj-button"></button></p>
+                    <p>129</p>
+                </div>
+            </div>
+            <hr>
+            <div class="pj-sidebar-1">
+                <h3>Amenities</h3>
+                <div>
+                    <input type="checkbox">
+                    <p>Free Wifi</p>
+                    <p>927</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Breakfast included</p>
+                    <p>648</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Pool</p>
+                    <p>107</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Free parking</p>
+                    <p>644</p>
+                </div>
+                <p>Show all</p>
+            </div>
+            <hr>
+            <div class="pj-sidebar-1">
+                <h3>Distances</h3>
+                <div>
+                    <input type="checkbox">
+                    <p>Getway of India</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Colaba</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Shree Siddhivinayak</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Chhatrapati Shivaji Terminus</p>
+                </div>
+                <p>Show all</p>
+            </div>
+            <hr>
+            <div class="pj-sidebar-1">
+                <h3>Neighbourhoods</h3>
+                <div>
+                    <input type="checkbox">
+                    <p>Western Suburbs</p>
+                    <p>989</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>South Mumbai</p>
+                    <p>498</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Andheri</p>
+                    <p>472</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Estern Suburbs</p>
+                    <p>352</p>
+                </div>
+                <p>Show all</p>
+            </div>
+            <hr>
+            <div class="pj-sidebar-1">
+                <h3>Traveller rating</h3>
+                <div>
+                    <input type="checkbox">
+                    <p><button class="pj-button"></button><button class="pj-button"></button><button
+                            class="pj-button"></button><button class="pj-button"></button><button
+                            class="pj-button"></button></p>
+
+                    <p>129</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p><button class="pj-button"></button><button class="pj-button"></button><button
+                            class="pj-button"></button><button class="pj-button"></button><button
+                            class="pj-button-1"></button></p>
+                    <p>& Up</p>
+                    <p>608</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p><button class="pj-button"></button><button class="pj-button"></button><button
+                            class="pj-button"></button><button class="pj-button-1"></button><button
+                            class="pj-button-1"></button></p>
+                    <p>& Up</p>
+                    <p>1066</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p><button class="pj-button"></button><button class="pj-button"></button><button
+                            class="pj-button-1"></button><button class="pj-button-1"></button><button
+                            class="pj-button-1"></button></p>
+                    <p>& Up</p>
+                    <p>1294</p>
+                </div>
+
+            </div>
+            <hr>
+            <div class="pj-sidebar-1">
+                <h3>Hotel class</h3>
+                <div>
+                    <input type="checkbox">
+                    <p>5 Star</p>
+                    <p>33</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>4 Star</p>
+                    <p>48</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>3 Star</p>
+                    <p>389</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>2 Star</p>
+                    <p>265</p>
+                </div>
+            </div>
+            <hr>
+            <div class="pj-sidebar-1">
+                <h3>Style</h3>
+
+                <div>
+                    <input type="checkbox">
+                    <p>Budget</p>
+                    <p>595</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Mid-range</p>
+                    <p>372</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Luxury</p>
+                    <p>52</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Family-friendly</p>
+                    <p>317</p>
+                </div>
+                <p>Show all</p>
+            </div>
+            <hr>
+            <div class="pj-sidebar-1">
+                <h3>Brands</h3>
+                <div>
+                    <input type="checkbox">
+                    <p>OYO</p>
+                    <p>554</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Treebo</p>
+                    <p>75</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>FabHotels</p>
+                    <p>66</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p>Taj</p>
+                    <p>5</p>
+                </div>
+                <p>Show all</p>
+            </div>
+
+            <div>
+                <img id="sidebar_img"
+                    src="https://s0.2mdn.net/dynamic/2/10780029/cdn.intelligencebank.com/us/share/YqKv/ZR9b6/4vzM4/original/brenton-hotel_1647363577777_brenton-hotel.jpeg"
+                    alt="">
+            </div>
+
+
         </div>
-        <hr>
-        <div class="pj-sidebar-1">
-            <h3>Hotel class</h3>
-            <div>
-                <input type="checkbox">
-                <p>5 Star</p>
-                <p>33</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>4 Star</p>
-                <p>48</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>3 Star</p>
-                <p>389</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>2 Star</p>
-                <p>265</p>
-            </div>
-        </div>
-        <hr>
-        <div class="pj-sidebar-1">
-            <h3>Style</h3>
-
-            <div>
-                <input type="checkbox">
-                <p>Budget</p>
-                <p>595</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Mid-range</p>
-                <p>372</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Luxury</p>
-                <p>52</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Family-friendly</p>
-                <p>317</p>
-            </div>
-            <p>Show all</p>
-        </div>
-        <hr>
-        <div class="pj-sidebar-1">
-            <h3>Brands</h3>
-            <div>
-                <input type="checkbox">
-                <p>OYO</p>
-                <p>554</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Treebo</p>
-                <p>75</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>FabHotels</p>
-                <p>66</p>
-            </div>
-            <div>
-                <input type="checkbox">
-                <p>Taj</p>
-                <p>5</p>
-            </div>
-            <p>Show all</p>
-        </div>
-
-        <div>
-            <img id="sidebar_img"
-                src="https://s0.2mdn.net/dynamic/2/10780029/cdn.intelligencebank.com/us/share/YqKv/ZR9b6/4vzM4/original/brenton-hotel_1647363577777_brenton-hotel.jpeg"
-                alt="">
-        </div>
 
 
-    </div>
-
-
-    <div id="footer_by_real_yogi" class="lowerFooter">
+        <div id="footer" class="lowerFooter">
 
 </body>
 
 </html>
 
-<script type="module"  >
+<script type="module">
 
-    import {footer,navbar} from "./components/footer.js"
+    import { footer, navbar } from "./components/footer.js"
     // console.log(footer)  
-    let container = document.getElementById("footer_by_real_yogi")
+    let container = document.getElementById("footer")
 
-    let navContainer = document.getElementById("navbar_yogi");
-    console.log(navbar)
-  
+    let navContainer = document.getElementById("navbar");
+    fetch('http://localhost:4500/users')
+        .then(response => response.json())
+        .then(data => {
+            let userName = data.name; // assuming the user's name is stored in the 'name' field
+            let signIdSpan = document.getElementById("signId");
+            signIdSpan.textContent = userName;
+        })
+        .catch(error => console.error(error));
+
     container.innerHTML = footer();
     navContainer.innerHTML = navbar();
-  
-  </script>
+
+</script>
 
 <script src="./script/mainPage.js"></script>
