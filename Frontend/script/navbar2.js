@@ -9,13 +9,13 @@ searchCityName.addEventListener("keypress", function(event) {
         localStorage.setItem("cityName",JSON.stringify(city))
     }
 
-    window.location.href = "mainPage.html"
+    window.location.href = "./mainPage.html"
 })
 
 
 function hotels(){
     // console.log("add path to hotels page")
-    window.location.href = "/mainPage.html"
+    window.location.href = "./mainPage.html"
 }
 
 function ThingsToDo(){

@@ -15,10 +15,10 @@ function addAlerts(){
 
 function signup(){
     // console.log("Do sign up Now")
-    window.location.href = "/email.html"
+    window.location.href = "./email.html"
 }
 
-let nickname = JSON.parse(localStorage.getItem("nickName")) || [];
+let name = JSON.parse(localStorage.getItem("nickName")) || [];
 // console.log(nickname)
 // console.log(nickname.length)
 
