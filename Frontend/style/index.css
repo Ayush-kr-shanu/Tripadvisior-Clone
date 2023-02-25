@@ -4,7 +4,7 @@
     padding: 0%;
 }
 
-.navbar_{
+.navbar{
     border-bottom: 1px solid rgb(204, 204, 204);
     padding: .5%;
     position: sticky;
@@ -13,7 +13,7 @@
     z-index: 10;
 }
 
-.home_main_navbar_{
+.home_main_navbar{
     width: 90%;
     margin: auto;
     
@@ -23,22 +23,22 @@
     /* padding: 1%; */
 }
 
-.main_navbar_logo_{
+.main_navbar_logo{
     width: 15%;
 }
-.main_navbar_logo_ img{
+.main_navbar_logo img{
     width: 100%;
 }
 
-/* .home_main_navbar_searchbox_{
+/* .home_main_navbar_searchbox{
     border: 1px solid black;
     width: 40%;
 } */
 
-.navbar_signup_section_{
-    width: 45%;
+.navbar_signup_section{
+    width: 35%;
     display: flex;
-    gap: 0% 1.5%;
+    gap: 0% 2%;
 }
 
 .navbar_flex{
@@ -53,8 +53,7 @@
 }
 
 .navbar_flex:hover{
-    background-color: rgb(17, 17, 17);
-    color: white;
+    background-color: rgb(248, 244, 244);
 }
 
 .navbar_flex p,span{
@@ -63,40 +62,16 @@
 
 }
 
-#navbar_signIn_{
+#navbar_signIn{
     background-color: black;
     color: white;
     width: 100%;
 }
 
-@media only screen and (max-width: 800px) {
-    .home_main_navbar_ {
-      flex-direction: column;
-    }
-  
-    .main_navbar_logo_ {
-      width: 30%;
-      margin: 2% 0;
-    }
-  
-    .navbar_signup_section_ {
-      width: 100%;
-      margin-top: 2%;
-    }
-  
-    .navbar_flex {
-      width: 100%;
-      margin-bottom: 2%;
-    }
-  
-    #navbar_signIn_ {
-      margin-top: 2%;
-    }
-  }
 
-/* ---------------------------------------second nav bar------------------- */
+/* ------------------------- 2nd navbar and whole home page ------------------------- */ 
 
-.navbar2_{
+.navbar2{
     width: 90%;
     margin: auto;
     /* border: 1px solid red; */
@@ -106,7 +81,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
 }
-.navbar2_element_{
+.navbar2_element{
     display: flex;
     margin: auto;
     width: 15%;
@@ -118,23 +93,21 @@
     /* font-weight: bold; */
 }
 
-.navbar2_element_ a{
+.navbar2_element a{
     color: black;
     text-decoration: none;
 }
 
-.navbar2_element_:hover{
+.navbar2_element:hover{
     cursor:pointer;
     background-color: black;
     color: white;
 }
 
-.navbar2_element_ a:hover{
+.navbar2_element a:hover{
     cursor: pointer;
     color: white;
 }
-
-
 
 /* navbar2nd */
 .img_with_search_box{
@@ -162,7 +135,7 @@
 }
 
 /* get out there section */
-.getOutThere_section_{
+.getOutThere_section{
     /* border: 1px solid black; */
     width: 90%;
     margin: auto;
@@ -172,7 +145,7 @@
     margin-bottom: 5%;
 
 }
-.getOutThere_fristDiv_{
+.getOutThere_fristDiv{
     /* border: 1px solid red; */
     width: 60%;
     padding: 1%;
@@ -180,14 +153,14 @@
 
 }
 
-.getOutThere_fristDiv_ > div{
+.getOutThere_fristDiv > div{
     line-height: 1.2;
     align-items: left;
     justify-content: center;
     margin-top: 4%;
 }
 
-.getOutThere_fristDiv_ > button{
+.getOutThere_fristDiv > button{
     padding: 2% 3%;
     background-color: black;
     color: white;
@@ -197,7 +170,7 @@
     cursor: pointer;
 }
 
-.getOutThere_secondDiv_{
+.getOutThere_secondDiv{
     width: 40%;
     background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/f7/1d/4d/caption.jpg?w=1000&h=-1&s=1");
     /* background-repeat: no-repeat; */
@@ -206,7 +179,7 @@
     padding: 3%;
 }
 
-.getOutThere_secondDiv_ > img{
+.getOutThere_secondDiv > img{
     /* background-color: red; */
     width: 30%;
     position: relative;
@@ -216,7 +189,7 @@
 
 /* travellers choice best of best section */
 
-.travellers_choice_section_{
+.travellers_choice_section{
     /* border: 1px solid red; */
     display: flex;
     background-color: #004f32;
@@ -225,27 +198,27 @@
     justify-content: space-around;
 }
 
-.travellers_frist_Div_{
+.travellers_frist_Div{
     width: 20%;
     /* border: 1px solid blue; */
     display: flex;
     justify-content: end;
     align-items: center;
 }
-.travellers_frist_Div_ > div{
+.travellers_frist_Div > div{
     width: 60%;
     /* border: 1px solid red; */
     text-align: center;
     /* line-height: 1.4; */
     
 }
-.travellers_frist_Div_ > div > h2{
+.travellers_frist_Div > div > h2{
     margin-top: 20%;
     color: white;
 
 }
 
-.travellers_frist_Div_ > div > button{
+.travellers_frist_Div > div > button{
     background-color: black;
     border: 1px solid black;
     color: white;
@@ -256,17 +229,18 @@
     margin-top: 40%;    
 }
 
-.travellers_frist_Div_ > div > button:hover{
+.travellers_frist_Div > div > button:hover{
     background-color: #333;
     border: 1px solid #333;
 }
 
-.travellers_frist_Div_ > div img{
+.travellers_frist_Div > div img{
     width: 80%;
     
 }
 
-/* ------------------------------------footer part------------------------------------- */
+/* ------------------------- footer  ------------------------- */
+
 .upperFooter{
     /* border: 1px solid red; */
     display: flex;
