@@ -16,12 +16,12 @@
             <h1>Welcome Back.</h1>
             <form >
             <div class="txt_field">
-                <input type="email" name="email" required>
+                <input type="email" id="email" name="email" required>
                 <span></span>
                 <label>Email</label>
             </div>
             <div class="txt_field">
-                <input type="password" name="password" required>
+                <input type="password" id="pass" name="password" required>
                 <span></span>
                 <label>Password</label>
             </div>
@@ -47,9 +47,26 @@ let form = document.querySelector("form");
   function myForm(event){
     event.preventDefault();
 
-    // console.log("here")
-    alert("Login Successful ")
-    window.location.href = "/index.html"
+    const payload={
+            email:document.getElementById('email').value,
+            pass:document.getElementById('pass').value
+        }
+        fetch('https://courageous-fox-train.cyclic.app/users/login',{
+            method: "POST",
+            headers:{
+                'Content-type':'application/json'
+            },
+            body:JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(res =>{
+            console.log(res);
+            localStorage.setItem('token',res.token)+
+            alert("Login Successful ")
+            window.location.href = "./index.html"
+        })
+        .catch(err=> console.log(err))
+        
   }
 
 </script>

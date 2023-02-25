@@ -39,7 +39,7 @@
         </div>
         <input name="submit" type="Submit" value="Join" />
         <div class="signup_link">
-          Have an Account ? <a href="/login.html">Sign In</a>
+          Have an Account ? <a href="./login.html">Sign In</a>
           <p>By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and Cookie Statement</p>
         </div>
       </form>
@@ -53,23 +53,31 @@
   let form = document.querySelector("form");
   form.addEventListener("submit", myForm);
 
-  let arr = [];
+  // let arr = [];
 
   function myForm(event){
     event.preventDefault();
 
-    let formData = {
-      nickName: document.getElementById("name").value,
+    let payload = {
+      name: document.getElementById("name").value,
       email: document.getElementById("email").value,
-      password: document.getElementById("password").value,
+      pass: document.getElementById("password").value,
     }
-
-    // console.log("formData", formData);
-    arr.push(formData);
-    localStorage.setItem("nickName",JSON.stringify(arr));
-    alert("Registration Successful ")
-    window.location.href = "/login.html"
-
+    fetch('http://localhost:4500/users/register',{
+      method:'POST',
+            headers:{
+                'Content-type':'application/json'
+            },
+            body:JSON.stringify(payload)
+        })
+        .then(res=>res.json())
+        .then(res=>{
+            console.log(res)
+            localStorage.setItem('token',res.token)
+            alert("Registration Successful ")
+            window.location.href = "/login.html"
+        })
+        .catch(err=>console.log(err))
   }
 
 </script>
