@@ -408,7 +408,7 @@
     let container = document.getElementById("footer")
 
     let navContainer = document.getElementById("navbar");
-    fetch('http://localhost:4500/users')
+    fetch('https://nice-erin-coypu-toga.cyclic.app/users')
         .then(response => response.json())
         .then(data => {
             let userName = data.name; // assuming the user's name is stored in the 'name' field

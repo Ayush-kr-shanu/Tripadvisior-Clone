@@ -3,7 +3,7 @@ function getUserDetails() {
     const token = localStorage.getItem('token');
     if (token) {
       const { userID } = jwt_decode(token);
-      fetch(`http://localhost:4500/users/${userID}`, {
+      fetch(`https://nice-erin-coypu-toga.cyclic.app/users/${userID}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -28,7 +28,7 @@ function getUserDetails() {
     const email = localStorage.getItem('email');
     const oldPassword = prompt('Enter your old password:');
     const newPassword = prompt('Enter your new password:');
-    fetch('http://localhost:4500/users/update-pass', {
+    fetch('https://nice-erin-coypu-toga.cyclic.app/users/update-pass', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
