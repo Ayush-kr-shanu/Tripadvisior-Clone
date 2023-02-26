@@ -100,8 +100,8 @@ function navbar () {
   <div class="navbar_signup_section">
     <div class="navbar_flex" id="navbar_review">
       <!-- <h1>&#x270E;</h1> -->
-      <span class="material-symbols-outlined"> edit </span>
-      <p>Review</p>
+      <span class="material-symbols-outlined"> face </span>
+      <p>My</p>
     </div>
 
     <div class="navbar_flex" id="navbar_trips">
@@ -114,7 +114,7 @@ function navbar () {
       <p>Alerts</p>
     </div>
 
-    <div class="navbar_flex" id="navbar_signIn"><span id="signId"></span></div>
+    <div class="navbar_flex" id="navbar_signIn"><span id="signId">Ayush</span></div>
   </div>
 </div>
   `
