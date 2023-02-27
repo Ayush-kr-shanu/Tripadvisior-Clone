@@ -1,8 +1,12 @@
 # Trim-pollution-4883-Tripadvisior
 
+Name => Ayush kumar Shanu
+
+Student code => fw22_0099
+
 Construct week project NXM101 Batch Project starts on 21-02-2023 and completed on 25-02-2023
 
-Project Code => Trim-pollution-4883
+Project Code => Trim-pollution-4883 <br>
 Website Name => Tripadvisior.com
 
 Project type => E-commerce
