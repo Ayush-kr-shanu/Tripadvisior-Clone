@@ -9,6 +9,8 @@ Construct week project NXM101 Batch Project starts on 21-02-2023 and completed o
 Project Code => Trim-pollution-4883 <br>
 Website Name => Tripadvisior.com
 
+Deployed lin => https://curious-cactus-16d1c5.netlify.app
+
 Project type => E-commerce
 
 Collaborative / Solo => Solo
